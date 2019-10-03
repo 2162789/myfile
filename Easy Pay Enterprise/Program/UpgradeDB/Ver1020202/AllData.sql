@@ -1,4 +1,0 @@
-INPUT INTO "DBA"."AlertField"
-FROM UpgradeDB\Ver1020202\AlertField.dat
-FORMAT ASCII
-BY ORDER;

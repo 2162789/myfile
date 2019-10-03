@@ -1,4 +1,0 @@
-'Employee','Employee','View_Ext_Cust_Employee','Employee','Employee.EmployeeId, Employee.EmployeeName'
-'Pay Period Summary','Pay Summary by Period','View_Ext_Cust_PayPeriodSumm','PayPeriodRecord','FGetEmployeeId(PayPeriodRecord.EmployeeSysId) AS EmployeeId, FGetEmployeeName(PayPeriodRecord.EmployeeSysId) AS EmployeeName, PayPeriodRecord.PayRecYear, PayPeriodRecord.PayRecPeriod'
-'Leave Year Summary','Leave Summary by Year','View_Ext_Cust_LveYearSumm','LeaveCycleRpt','FGetEmployeeId(LeaveCycleRpt.EmployeeSysId) AS EmployeeId, FGetEmployeeName(LeaveCycleRpt.EmployeeSysId) AS EmployeeName, LeaveCycleRpt.LeaveTypeId, LeaveCycleRpt.LveYearRpt'
-'Leave Period Summary','Leave Summary by Period','View_Ext_Cust_LvePeriodSumm','LvePeriodBalRpt','FGetEmployeeId(LvePeriodBalRpt.EmployeeSysId) AS EmployeeId, FGetEmployeeName(LvePeriodBalRpt.EmployeeSysId) AS EmployeeName, LvePeriodBalRpt.LeaveTypeId, LvePeriodBalRpt.LveYearRpt, LvePeriodBalRpt.LvePeriodRpt'

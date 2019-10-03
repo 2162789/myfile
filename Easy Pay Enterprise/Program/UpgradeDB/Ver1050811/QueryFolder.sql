@@ -1,5 +1,0 @@
-Insert Into DBA.QueryFolder (DBA.QueryFolderID, DBA.QueryFolderDesc, SourceTmplFolderID) Values ('Confirmation Letter','Confirmation Letter','ConfirmationLetter');
-Insert Into DBA.QueryFolder (DBA.QueryFolderID, DBA.QueryFolderDesc, SourceTmplFolderID) Values ('Acceptance of Resign','Acceptance Of Resignation','ResignationLetter');
-Insert Into DBA.QueryFolder (DBA.QueryFolderID, DBA.QueryFolderDesc, SourceTmplFolderID) Values ('Increment Letter','Increment Letter','IncrementLetter');
-Insert Into DBA.QueryFolder (DBA.QueryFolderID, DBA.QueryFolderDesc, SourceTmplFolderID) Values ('Letter of Promotion','Letter of Promotion','PromotedLetter');
-Insert Into DBA.QueryFolder (DBA.QueryFolderID, DBA.QueryFolderDesc, SourceTmplFolderID) Values ('Employment Letter','Employment Letter - Singapore','EmploymentLetter');

@@ -1,6 +1,0 @@
-'DonationCodeSetup','PayAutoSetup','Donation Code Setup','Pay',0,0,0,'EC_DonationCodeSetup'
-'EC_PersonDefault','EC_EmployeeSetup','Personnel Details Default','EPStandard',0,0,1,''
-'EC_EmpeeDefault','EC_EmployeeSetup','Employment Details Default','EPStandard',0,0,1,''
-'EC_PayDetailsDefault','EC_EmployeeSetup','Pay Details Defaults','EPStandard',0,0,1,''
-'EC_LvDetailsDefault','EC_EmployeeSetup','Leave Details Default','EPStandard',0,0,1,''
-'EC_DonationCodeSetup','EC_EmployeeSetup','Donation Code Setup','EPStandard',0,0,1,''

@@ -1,5 +1,0 @@
-Insert Into DBA.TmplSearch (TmplQueryID, TmplSearchID, SearchCondition, SearchDesc, SearchType) Values ('ConfirmedEmp','ConfirmedEmp','ConfirmationDate Between <D1> and <D2>','Confirmation Date Range','S');
-Insert Into DBA.TmplSearch (TmplQueryID, TmplSearchID, SearchCondition, SearchDesc, SearchType) Values ('ResignedEmp','ResignedEmp','EmployeeID = <K1> And CessationDate != ''1899-12-30''','Employee ID','S');
-Insert Into DBA.TmplSearch (TmplQueryID, TmplSearchID, SearchCondition, SearchDesc, SearchType) Values ('IncrementEmp','IncrementEmp','BRProgEffectiveDate=FGetBREffectiveDateDuringPeriod(EmployeeSysID,<D1>,<D2>,0)','Effective Date Range','S');
-Insert Into DBA.TmplSearch (TmplQueryID, TmplSearchID, SearchCondition, SearchDesc, SearchType) Values ('PromotedEmp','PromotedEmp','(CareerEffectiveDate=FGetCareerProEffectiveDateDuringPeriod(EmployeeSysID,<D1>,<D2>)) ','Effective Date Range','S');
-Insert Into DBA.TmplSearch (TmplQueryID, TmplSearchID, SearchCondition, SearchDesc, SearchType) Values ('EmploymentEmp','EmploymentEmp','HireDate Between <D1> And <D2>','Hire Date Range','S');

@@ -1,5 +1,0 @@
-Insert Into DBA.RemFunction(RemFunctionID,TaskCategoryID,IsCustomised,DllName,FuncMessage,SysDateTableID,SysDateAttributeID,SysDateSqlJoin,SysDateSqlCond,ParamNameU1,ParamNameU2,ParamNameU3,ParamNameU4,ParamNameU5,FuncKeyAttributeId1,FuncKeyAttributeId2,FuncKeyAttributeId3,FuncKeyAttributeId4,FuncKeyAttributeId5,FuncKeyword1,FuncKeyword2,FuncKeyword3,FuncKeyword4,FuncKeyword5) Values ('PayNSTrainingStart','Pay',0,'VsBTaskReminder','Pay - NS Training - Start Date','NSPayCase', 'NSStartDate','NSPayCase N JOIN Employee E ON N.EmployeeSysID=E.EmployeeSysID', '','','','','','','E.EmployeeSysID','NSPaySysId','','','','EmployeeName','EmployeeID','NSStartDate','','');
-
-Insert Into DBA.RemDetailsTmpl(RemFunctionID,RemDetailsTmplOrder,Details) Values ('PayNSTrainingStart',1,'<K1> (<K2>), due on <K3>');
-
-commit work;
