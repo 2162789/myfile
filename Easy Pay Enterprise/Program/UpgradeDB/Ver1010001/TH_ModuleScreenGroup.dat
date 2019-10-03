@@ -1,0 +1,4 @@
+'EC_ThTaxDetailsView','EC_InterfaceViewer','Income Tax Details Viewer','InterfaceViewer',0,0,1,''
+'EC_EmpOtherInfoView','EC_InterfaceViewer','Employee Other Info Viewer','InterfaceViewer',0,0,1,''
+'ThTaxDetailsViewer','InterfaceViewer','Income Tax Details Viewer','InterfaceViewer',0,0,0,'EC_ThTaxDetailsView'
+'EmpeeOtherInfoViewer','InterfaceViewer','Employee Other Info Viewer','InterfaceViewer',0,0,0,'EC_EmpOtherInfoView'

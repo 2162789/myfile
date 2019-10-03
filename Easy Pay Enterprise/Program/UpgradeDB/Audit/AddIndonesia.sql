@@ -1,0 +1,228 @@
+/*Begin of head for every patch*/
+
+if exists(select * from "DBA"."subRegistry" WHERE registryid='System'and subregistryid='Patch')
+then
+	Delete from SubRegistry where registryid='System'and subregistryid='Patch'
+end if;
+/*End of head for every patch*/
+
+Read upgradeDB\Audit\DelIndonesia.sql;
+Read upgradeDB\Audit\AddBasic.sql;
+
+create trigger dba.AuditTrailDeletePeriodPolicySummary after delete order 1 on
+DBA.PeriodPolicySummary
+referencing old as old_record
+for each row
+begin
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Delete','PeriodPolicySummary','ContriSDF',
+	 FGetEmployeeId(old_record.EmployeeSysId),old_record.ContriSDF,'',
+	 old_record.EmployeeSysId,old_record.PayPeriodSGSPGenId,old_record.PayRecYear,old_record.PayRecPeriod);
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Delete','PeriodPolicySummary','ContriAddEECPF',
+	 FGetEmployeeId(old_record.EmployeeSysId),old_record.ContriAddEECPF,'',
+	 old_record.EmployeeSysId,old_record.PayPeriodSGSPGenId,old_record.PayRecYear,old_record.PayRecPeriod);
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Delete','PeriodPolicySummary','ContriOrdEECPF',
+	 FGetEmployeeId(old_record.EmployeeSysId),old_record.ContriOrdEECPF,'',
+	 old_record.EmployeeSysId,old_record.PayPeriodSGSPGenId,old_record.PayRecYear,old_record.PayRecPeriod);
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Delete','PeriodPolicySummary','ContriOrdERCPF',
+	 FGetEmployeeId(old_record.EmployeeSysId),old_record.ContriOrdERCPF,'',
+	 old_record.EmployeeSysId,old_record.PayPeriodSGSPGenId,old_record.PayRecYear,old_record.PayRecPeriod);
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Delete','PeriodPolicySummary','ContriAddERCPF',
+	 FGetEmployeeId(old_record.EmployeeSysId),old_record.ContriAddERCPF,'',
+	 old_record.EmployeeSysId,old_record.PayPeriodSGSPGenId,old_record.PayRecYear,old_record.PayRecPeriod);
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Delete','PeriodPolicySummary','CPFWage',
+	 FGetEmployeeId(old_record.EmployeeSysId),old_record.CPFWage,'',
+	 old_record.EmployeeSysId,old_record.PayPeriodSGSPGenId,old_record.PayRecYear,old_record.PayRecPeriod);
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Delete','PeriodPolicySummary','SDFWage',
+	 FGetEmployeeId(old_record.EmployeeSysId),old_record.SDFWage,'',
+	 old_record.EmployeeSysId,old_record.PayPeriodSGSPGenId,old_record.PayRecYear,old_record.PayRecPeriod);
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Delete','PeriodPolicySummary','CPFStatus',
+	 FGetEmployeeId(old_record.EmployeeSysId),old_record.CPFStatus,'',
+	 old_record.EmployeeSysId,old_record.PayPeriodSGSPGenId,old_record.PayRecYear,old_record.PayRecPeriod);
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Delete','PeriodPolicySummary','CPFClass',
+	 FGetEmployeeId(old_record.EmployeeSysId),old_record.CPFClass,'',
+	 old_record.EmployeeSysId,old_record.PayPeriodSGSPGenId,old_record.PayRecYear,old_record.PayRecPeriod)
+end
+;
+create trigger dba.AuditTrailInsertPeriodPolicySummary after insert order 2 on
+DBA.PeriodPolicySummary
+referencing new as new_record
+for each row
+begin
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Insert','PeriodPolicySummary','ContriSDF',
+	 FGetEmployeeId(new_record.EmployeeSysId),'',new_record.ContriSDF,
+	 new_record.EmployeeSysId,new_record.PayPeriodSGSPGenId,new_record.PayRecYear,new_record.PayRecPeriod);
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Insert','PeriodPolicySummary','ContriAddEECPF',
+	 FGetEmployeeId(new_record.EmployeeSysId),'',new_record.ContriAddEECPF,
+	 new_record.EmployeeSysId,new_record.PayPeriodSGSPGenId,new_record.PayRecYear,new_record.PayRecPeriod);
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Insert','PeriodPolicySummary','ContriOrdEECPF',
+	 FGetEmployeeId(new_record.EmployeeSysId),'',new_record.ContriOrdEECPF,
+	 new_record.EmployeeSysId,new_record.PayPeriodSGSPGenId,new_record.PayRecYear,new_record.PayRecPeriod);
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Insert','PeriodPolicySummary','ContriOrdERCPF',
+	 FGetEmployeeId(new_record.EmployeeSysId),'',new_record.ContriOrdERCPF,
+	 new_record.EmployeeSysId,new_record.PayPeriodSGSPGenId,new_record.PayRecYear,new_record.PayRecPeriod);
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Insert','PeriodPolicySummary','ContriAddERCPF',
+	 FGetEmployeeId(new_record.EmployeeSysId),'',new_record.ContriAddERCPF,
+	 new_record.EmployeeSysId,new_record.PayPeriodSGSPGenId,new_record.PayRecYear,new_record.PayRecPeriod);
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Insert','PeriodPolicySummary','CPFWage',
+	 FGetEmployeeId(new_record.EmployeeSysId),'',new_record.CPFWage,
+	 new_record.EmployeeSysId,new_record.PayPeriodSGSPGenId,new_record.PayRecYear,new_record.PayRecPeriod);
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Insert','PeriodPolicySummary','SDFWage',
+	 FGetEmployeeId(new_record.EmployeeSysId),'',new_record.SDFWage,
+	 new_record.EmployeeSysId,new_record.PayPeriodSGSPGenId,new_record.PayRecYear,new_record.PayRecPeriod);
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Insert','PeriodPolicySummary','CPFStatus',
+	 FGetEmployeeId(new_record.EmployeeSysId),'',new_record.CPFStatus,
+	 new_record.EmployeeSysId,new_record.PayPeriodSGSPGenId,new_record.PayRecYear,new_record.PayRecPeriod);
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Insert','PeriodPolicySummary','CPFClass',
+	 FGetEmployeeId(new_record.EmployeeSysId),'',new_record.CPFClass,
+	 new_record.EmployeeSysId,new_record.PayPeriodSGSPGenId,new_record.PayRecYear,new_record.PayRecPeriod)
+end
+;
+create trigger dba.AuditTrailUpdatePeriodPolicySummary_ContriSDF after update of ContriSDF
+order 3 on DBA.PeriodPolicySummary
+referencing old as old_record new as new_record
+for each row
+begin
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Update','PeriodPolicySummary','ContriSDF',
+	 FGetEmployeeId(new_record.EmployeeSysId),old_record.ContriSDF,new_record.ContriSDF,
+	 new_record.EmployeeSysId,new_record.PayPeriodSGSPGenId,new_record.PayRecYear,new_record.PayRecPeriod)
+end
+;
+create trigger dba.AuditTrailUpdatePeriodPolicySummary_ContriAddEECPF after update of ContriAddEECPF
+order 4 on DBA.PeriodPolicySummary
+referencing old as old_record new as new_record
+for each row
+begin
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Update','PeriodPolicySummary','ContriAddEECPF',
+	 FGetEmployeeId(new_record.EmployeeSysId),old_record.ContriAddEECPF,new_record.ContriAddEECPF,
+	 new_record.EmployeeSysId,new_record.PayPeriodSGSPGenId,new_record.PayRecYear,new_record.PayRecPeriod)
+end
+;
+create trigger dba.AuditTrailUpdatePeriodPolicySummary_ContriOrdEECPF after update of ContriOrdEECPF
+order 5 on DBA.PeriodPolicySummary
+referencing old as old_record new as new_record
+for each row
+begin
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Update','PeriodPolicySummary','ContriOrdEECPF',
+	 FGetEmployeeId(new_record.EmployeeSysId),old_record.ContriOrdEECPF,new_record.ContriOrdEECPF,
+	 new_record.EmployeeSysId,new_record.PayPeriodSGSPGenId,new_record.PayRecYear,new_record.PayRecPeriod)
+end
+;
+create trigger dba.AuditTrailUpdatePeriodPolicySummary_ContriOrdERCPF after update of ContriOrdERCPF
+order 6 on DBA.PeriodPolicySummary
+referencing old as old_record new as new_record
+for each row
+begin
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Update','PeriodPolicySummary','ContriOrdERCPF',
+	 FGetEmployeeId(new_record.EmployeeSysId),old_record.ContriOrdERCPF,new_record.ContriOrdERCPF,
+	 new_record.EmployeeSysId,new_record.PayPeriodSGSPGenId,new_record.PayRecYear,new_record.PayRecPeriod)
+end
+;
+create trigger dba.AuditTrailUpdatePeriodPolicySummary_ContriAddERCPF after update of ContriAddERCPF
+order 7 on DBA.PeriodPolicySummary
+referencing old as old_record new as new_record
+for each row
+begin
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Update','PeriodPolicySummary','ContriAddERCPF',
+	 FGetEmployeeId(new_record.EmployeeSysId),old_record.ContriAddERCPF,new_record.ContriAddERCPF,
+	 new_record.EmployeeSysId,new_record.PayPeriodSGSPGenId,new_record.PayRecYear,new_record.PayRecPeriod)
+end
+;
+create trigger dba.AuditTrailUpdatePeriodPolicySummary_CPFWage after update of CPFWage
+order 8 on DBA.PeriodPolicySummary
+referencing old as old_record new as new_record
+for each row
+begin
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Update','PeriodPolicySummary','CPFWage',
+	 FGetEmployeeId(new_record.EmployeeSysId),old_record.CPFWage,new_record.CPFWage,
+	 new_record.EmployeeSysId,new_record.PayPeriodSGSPGenId,new_record.PayRecYear,new_record.PayRecPeriod)
+end
+;
+create trigger dba.AuditTrailUpdatePeriodPolicySummary_SDFWage after update of SDFWage
+order 9 on DBA.PeriodPolicySummary
+referencing old as old_record new as new_record
+for each row
+begin
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Update','PeriodPolicySummary','SDFWage',
+	 FGetEmployeeId(new_record.EmployeeSysId),old_record.SDFWage,new_record.SDFWage,
+	 new_record.EmployeeSysId,new_record.PayPeriodSGSPGenId,new_record.PayRecYear,new_record.PayRecPeriod)
+end
+;
+create trigger dba.AuditTrailUpdatePeriodPolicySummary_CPFStatus after update of CPFStatus
+order 10 on DBA.PeriodPolicySummary
+referencing old as old_record new as new_record
+for each row
+begin
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Update','PeriodPolicySummary','CPFStatus',
+	 FGetEmployeeId(new_record.EmployeeSysId),old_record.CPFStatus,new_record.CPFStatus,
+	 new_record.EmployeeSysId,new_record.PayPeriodSGSPGenId,new_record.PayRecYear,new_record.PayRecPeriod)
+end
+;
+create trigger dba.AuditTrailUpdatePeriodPolicySummary_CPFClass after update of CPFClass
+order 11 on DBA.PeriodPolicySummary
+referencing old as old_record new as new_record
+for each row
+begin
+  insert into AuditTrailTable(AuditUserID,AuditIP,AuditTimeStamp,AuditEventType,
+	 AuditTableName,AuditFieldName,AuditEmpID,BeforeValue,AfterValue,AuditKey1,AuditKey2,AuditKey3,AuditKey4) values(
+	 connection_property('Userid'),connection_property('NodeAddress'),NOW(*),'Update','PeriodPolicySummary','CPFClass',
+	 FGetEmployeeId(new_record.EmployeeSysId),old_record.CPFClass,new_record.CPFClass,
+	 new_record.EmployeeSysId,new_record.PayPeriodSGSPGenId,new_record.PayRecYear,new_record.PayRecPeriod)
+end
+;
+commit work;
+/*Begin of tailor for every patch*/
+INSERT into "DBA"."subRegistry"(registryid,subregistryid,IntegerAttr) values('System','Patch',1);
+commit work;
+/*End of tailor for every patch*/

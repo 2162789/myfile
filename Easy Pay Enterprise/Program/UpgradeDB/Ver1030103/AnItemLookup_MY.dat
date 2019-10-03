@@ -1,0 +1,4 @@
+'EmpeeEPFManSub','PolicyRecord','Ana_EmpeeEPFManSub','PaySystem','AnlysAmount1','PolicyRecord','sum(CurrEEManContri+PrevEEManContri)','','AnlysFAmount1','AnlysDoubleValue1'
+'EmpeeEPFVolSub','PolicyRecord','Ana_EmpeeEPFVolSub','PaySystem','AnlysAmount1','PolicyRecord','sum(CurrEEVolContri+PrevEEVolContri)','','AnlysFAmount1','AnlysDoubleValue1'
+'EmperEPFManSub','PolicyRecord','Ana_EmperEPFManSub','PaySystem','AnlysAmount1','PolicyRecord','sum(CurrERManContri+PrevERManContri)','','AnlysFAmount1','AnlysDoubleValue1'
+'EmperEPFVolSub','PolicyRecord','Ana_EmperEPFVolSub','PaySystem','AnlysAmount1','PolicyRecord','sum(CurrERVolContri+PrevERVolContri)','','AnlysFAmount1','AnlysDoubleValue1'

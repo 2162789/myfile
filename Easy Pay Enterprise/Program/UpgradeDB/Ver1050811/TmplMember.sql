@@ -1,0 +1,16 @@
+Insert Into DBA.TmplMember (TmplFolderID, TmplQueryID, MasterQueryID) Values ('ConfirmationLetter','PersonalQuery','ConfirmedEmp');
+Insert Into DBA.TmplMember (TmplFolderID, TmplQueryID, MasterQueryID) Values ('ConfirmationLetter','Company','');
+Insert Into DBA.TmplMember (TmplFolderID, TmplQueryID, MasterQueryID) Values ('ConfirmationLetter','ConfirmedEmp','');
+Insert Into DBA.TmplMember (TmplFolderID, TmplQueryID, MasterQueryID) Values ('ConfirmationLetter','EmployeeQuery','ConfirmedEmp');
+Insert Into DBA.TmplMember (TmplFolderID, TmplQueryID, MasterQueryID) Values ('ResignationLetter','Company','');
+Insert Into DBA.TmplMember (TmplFolderID, TmplQueryID, MasterQueryID) Values ('ResignationLetter','ResignedEmp','');
+Insert Into DBA.TmplMember (TmplFolderID, TmplQueryID, MasterQueryID) Values ('ResignationLetter','EmployeeQuery','ResignedEmp');
+Insert Into DBA.TmplMember (TmplFolderID, TmplQueryID, MasterQueryID) Values ('IncrementLetter','Company','');
+Insert Into DBA.TmplMember (TmplFolderID, TmplQueryID, MasterQueryID) Values ('IncrementLetter','IncrementEmp','');
+Insert Into DBA.TmplMember (TmplFolderID, TmplQueryID, MasterQueryID) Values ('IncrementLetter','BasicRateProgression','IncrementEmp');
+Insert Into DBA.TmplMember (TmplFolderID, TmplQueryID, MasterQueryID) Values ('PromotedLetter','Company','');
+Insert Into DBA.TmplMember (TmplFolderID, TmplQueryID, MasterQueryID) Values ('PromotedLetter','PromotedEmp','');
+Insert Into DBA.TmplMember (TmplFolderID, TmplQueryID, MasterQueryID) Values ('PromotedLetter','BasicRateProgression','PromotedEmp');
+Insert Into DBA.TmplMember (TmplFolderID, TmplQueryID, MasterQueryID) Values ('EmploymentLetter','Company','');
+Insert Into DBA.TmplMember (TmplFolderID, TmplQueryID, MasterQueryID) Values ('EmploymentLetter','EmploymentEmp','');
+Insert Into DBA.TmplMember (TmplFolderID, TmplQueryID, MasterQueryID) Values ('EmploymentLetter','EmployeeQuery','EmploymentEmp');

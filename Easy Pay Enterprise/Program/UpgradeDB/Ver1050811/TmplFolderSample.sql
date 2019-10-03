@@ -1,0 +1,5 @@
+Insert Into DBA.TmplFolderSample (TmplFolderID,SampleSysID, SampleDesc, SamplePDFPath, SampleRTMPath) Values ('ConfirmationLetter',22,'Individual Confirmation Letter','ConfirmationLetter.pdf','ConfirmationLetter.rtm');
+Insert Into DBA.TmplFolderSample (TmplFolderID,SampleSysID, SampleDesc, SamplePDFPath, SampleRTMPath) Values ('ResignationLetter',23,'Individual Acceptance Of Resignation','ResignationLetter.pdf','ResignationLetter.rtm');
+Insert Into DBA.TmplFolderSample (TmplFolderID,SampleSysID, SampleDesc, SamplePDFPath, SampleRTMPath) Values ('IncrementLetter',24,'Individual Increment Letter','IncrementLetter.pdf','IncrementLetter.rtm');
+Insert Into DBA.TmplFolderSample (TmplFolderID,SampleSysID, SampleDesc, SamplePDFPath, SampleRTMPath) Values ('PromotedLetter',25,'Individual Letter of Promotion','PromotedLetter.pdf','PromotedLetter.rtm');
+Insert Into DBA.TmplFolderSample (TmplFolderID,SampleSysID, SampleDesc, SamplePDFPath, SampleRTMPath) Values ('EmploymentLetter',26,'Individual Employment Letter','EmploymentLetter.pdf','EmploymentLetter.rtm');

@@ -1,0 +1,1 @@
+Update PeriodPolicySummary Set TaxZakatRelief = TotalCDAC where PayRecYear=2009;

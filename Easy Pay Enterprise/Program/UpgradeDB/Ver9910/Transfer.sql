@@ -1,0 +1,54 @@
+create procedure DBA.ASQLTransferDelInterfaceRecs()
+begin
+  // Code Tables
+  delete from iCareer;
+  delete from iTitleCode;
+  delete from iCountry;
+  delete from iReligion;
+  delete from iMaritalStatus;
+  delete from iRace;
+  delete from iFWLClass;
+  delete from iDepartment;
+  delete from iCategory;
+  delete from iBranch;
+  delete from iSection;
+  delete from iPositionCode;
+  delete from iEmpCode1;
+  delete from iEmpCode2;
+  delete from iEmpCode3;
+  delete from iCessation;
+  delete from iBank;
+  delete from iBankBranch;
+  // Personnel Tables
+  delete from iPersonal;
+  delete from iPersonalContact;
+  delete from iPersonalEmail;
+  delete from iPersonalAddress;
+  delete from iResidenceStatusRecord;
+  delete from iFamily;
+  // Employment Tables
+  delete from iEmployee;
+  delete from iLeaveEmployee;
+  delete from iCareerProgression;
+  delete from iBasicRateProgression;
+  delete from iPaymentBankInfo;
+  delete from iFWLProgression;
+  delete from iOTRecord;
+  delete from iAllowanceRecord;
+  delete from iPayElement;
+  delete from iPayElementRange;
+  delete from iOverTime;
+  delete from iShift;
+  // YTD Tables
+  delete from iYTDGeneral;
+  delete from iYTDSGPolicy;
+  delete from iYTDIDPolicy;
+  delete from iYTDAllowanceRecord;
+  delete from iYTDOTRecord;
+  delete from iYTDShiftRecord;
+  delete from iYTDLeaveDeductionRecord;
+  delete from iYTDHKPolicy;
+  delete from iYTDMYPolicy;
+  commit work
+end
+;

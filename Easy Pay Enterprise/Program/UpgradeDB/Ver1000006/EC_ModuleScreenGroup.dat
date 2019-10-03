@@ -1,0 +1,3 @@
+'EC_InterfaceSetup','EC_SystemSetup','Interface Setup','EPClassic',0,0,1,''
+'EC_ProcessInterface','EC_SystemProcess','Process Interface','EPClassic',0,0,1,''
+'EC_CustomView','EC_SystemModules','Custom View','EPClassic',0,0,1,''

@@ -1,0 +1,10 @@
+INPUT INTO "DBA"."SubRegistry"
+FROM UpgradeDB\Ver1000001\SG_SubRegistry.dat
+FORMAT ASCII
+BY ORDER;
+
+
+
+COMMIT WORK;
+
+
